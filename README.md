@@ -1,2 +1,2 @@
 # Django-Project
-This is a website Project builded with Django.
+This is a website builded with Django.
