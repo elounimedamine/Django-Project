@@ -5,25 +5,8 @@
 <br>
 <div class="container">
     <div class="row">
-        {% for product in produits %}
          <div class="col">
-            <div class="card" style="width: 18rem;">
-                {% if product.image_url %}
-                <img src="{{ product.image_url.url }}" class="card-img-top-responsive" alt="{{ product.name }}">
-                {% else %}
-                <h3>No Image</h3>
-                {% endif %}
-                <div class="card-body">
-                    <h5 class="card-title">{{ product.name }}</h5>
-                    <p class="card-text">{{ product.price }} DT</p>
-                    <p class="card-text">{{ product.stock }} Pièces</p>
-                    <INPUT type="button" class="btn btn-info alert alert-primary" role="alert" name="btn1" value= "Ajouter au panier" onclick="alert('Produit a été ajouté avec succès!')">
-                    <INPUT type="button" class="btn btn-danger alert alert-danger" role="alert" name="btn2" value= "Supprimer du panier" onclick="alert('Produit supprimé avec succès!')">
-                </div>
-            </div>
-             <br>
         </div>
-    {% endfor %}
     </div>
 </div>
 {% endblock %}
