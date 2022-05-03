@@ -18,6 +18,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 # dans cette liste on va mettre les liens (site de l'admin)
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('products.urls')), #products le nom de l'application et on a importer les urls de page products

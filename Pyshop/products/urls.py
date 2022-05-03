@@ -5,3 +5,4 @@ from . import views #on va allez dans le view
 urlpatterns = [ #contient les urls
     path('products', views.index), #importer le path
 ]
+
