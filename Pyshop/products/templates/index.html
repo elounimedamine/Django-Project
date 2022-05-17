@@ -5,18 +5,21 @@
 <br>
 <div class="container">
     <div class="row">
+        {% for product in produits %} <!--boucle for pour parcourir la liste des produits insérées à la base de notre site-->
          <div class="col">
-              <div class="card" style="width: 18rem;">
-                 <h3>Image not found</h3>
-                 <img src="..." class="card-img-top" alt="...">
-                 <div class="card-body">
-                   <h5 class="card-title">Test Card</h5>
-                   <p class="card-text">This is a simple test for the Card title of a product.</p>
-                   <a href="#" class="btn btn-primary">Add Product</a>
+            <div class="card" style="width: 18rem;">
+                {% if product.image_url %} <!--si l'url de l'image existe donc il va afficher le nom de produit ajoutée-->
+                <img src="{{ product.image_url.url }}" class="card-img-top-responsive" alt="{{ product.name }}">
+                {% else %}
+                <h3>No Image</h3><!--sinon il va afficher No Image-->
+                {% endif %}
+                <div class="card-body">
+                    <a href="#" class="btn btn-primary">Add Product</a><!--bouton ajouter-->
                 </div>
-             </div>
+            </div>
              <br>
         </div>
+    {% endfor %}<!--fin de la boucle-->
     </div>
 </div>
-{% endblock %}
+{% endblock %}<!--fin de block-->
