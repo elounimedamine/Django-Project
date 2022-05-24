@@ -11,15 +11,19 @@
                 {% if product.image_url %} <!--si l'url de l'image existe donc il va afficher le nom de produit ajoutée-->
                 <img src="{{ product.image_url.url }}" class="card-img-top-responsive" alt="{{ product.name }}">
                 {% else %}
-                <h3>No Image</h3><!--sinon il va afficher No Image-->
+                <h3>No Image</h3> <!--sinon il va afficher No Image-->
                 {% endif %}
                 <div class="card-body">
-                    <a href="#" class="btn btn-primary">Add Product</a><!--bouton ajouter-->
+                    <h5 class="card-title">{{ product.name }}</h5> <!--les différents informations d'un produit-->
+                    <p class="card-text">{{ product.price }} DT</p>
+                    <p class="card-text">{{ product.stock }} Pièces</p>
+                    <INPUT type="button" class="btn btn-info alert alert-primary" role="alert" name="btn1" value= "Ajouter au panier" onclick="alert('Produit a été ajouté avec succès!')"> <!--bouton ajouter-->
+                    <INPUT type="button" class="btn btn-danger alert alert-danger" role="alert" name="btn2" value= "Supprimer du panier" onclick="alert('Produit supprimé avec succès!')"> <!--bouton supprimer-->
                 </div>
             </div>
              <br>
         </div>
-    {% endfor %}<!--fin de la boucle-->
+    {% endfor %} <!--fin de la boucle-->
     </div>
 </div>
-{% endblock %}<!--fin de block-->
+{% endblock %} <!--fin de block-->
